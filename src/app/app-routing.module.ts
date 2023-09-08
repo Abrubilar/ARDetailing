@@ -15,6 +15,14 @@ const routes: Routes = [
     path: 'servicio',
     loadChildren: () => import('./page/servicio/servicio.module').then( m => m.ServicioPageModule)
   },
+  {
+    path: 'trabajo',
+    loadChildren: () => import('./page/trabajo/trabajo.module').then( m => m.TrabajoPageModule)
+  },
+  {
+    path: 'reservar-hora',
+    loadChildren: () => import('./page/reservar-hora/reservar-hora.module').then( m => m.ReservarHoraPageModule)
+  },
 ];
 
 @NgModule({
