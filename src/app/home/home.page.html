@@ -1,20 +1,87 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-app>
+    <ion-menu contentId="main-content">
+      <ion-header>
+        <ion-toolbar color="tertiary">
+          <ion-title>Contenido</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding"></ion-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon slot="start" name="home"></ion-icon>
+          <ion-label>Inicio</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon slot="start" name="person"></ion-icon>
+          <ion-button  routerLink="/perfil-usuario">
+            <ion-label>Perfil</ion-label>
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-icon slot="start" name="settings"></ion-icon>
+          <ion-button  routerLink="/configuracion">
+            <ion-label>Configuracion</ion-label>
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-icon slot="start" name="exit-outline"></ion-icon>
+          <ion-button  routerLink="/home">
+            <ion-label>Salir</ion-label>
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-icon slot="start" name="information-outline"></ion-icon>
+          <ion-label>Ayuda</ion-label>
+        </ion-item>
+      </ion-list>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button  auto-hide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Inicio</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content [fullscreen]="true"> 
+      <!-- Contenido de la página de inicio -->
+      <ion-row>
+        <ion-col size="6">
+          <ion-card>
+            <ion-img src="assets/img/tu_imagen1.jpg"></ion-img>
+            <ion-card-content>
+              <p>
+                Esta es una descripción de tu primer contenido de inicio. Puedes agregar imágenes y texto aquí para mostrar lo que quieras.
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+        <ion-col size="6">
+          <ion-card>
+            <ion-img src="assets/img/tu_imagen2.jpg"></ion-img>
+            <ion-card-content>
+              <p>
+                Esta es una descripción de tu segundo contenido de inicio. Puedes agregar imágenes y texto aquí para mostrar lo que quieras.
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <!-- Puedes seguir agregando más contenido aquí -->
+    </ion-content>
+    <!-- Footer -->
+    <ion-footer>
+      <ion-toolbar class="footer">
+        <ion-row class="footer__row footer__row--bottom">
+          <ion-col size="12" class="ion-text-center">
+            <small class="footer__small">&copy;2023 <b>AR.Repuestos</b> Todos los derechos de autor son reservados por nuestra página web</small>
+          </ion-col>
+        </ion-row>
+      </ion-toolbar>
+    </ion-footer>
   </div>
-</ion-content>
+</ion-app>
