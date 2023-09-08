@@ -1,0 +1,7 @@
+{
+  "name": "arDetailing",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
