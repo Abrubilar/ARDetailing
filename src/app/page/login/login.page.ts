@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Navigation, NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,15 +17,28 @@ export class LoginPage implements OnInit {
   password: string = ""
 
 
-  constructor() { }
+  constructor (private router: Router) { }
 
   ngOnInit() {
   }
 
   iniciarSesion()
   {
-    console.log("rut"+this.formLogin.rut);
-    console.log("password"+this.formLogin.password);
+
+
+    console.log("rut"+this.formLogin.rut)
+    console.log("password"+this.formLogin.password)
+
+    let datosEnviar : NavigationExtras = {
+      queryParams: {
+        rutUsuario: this.formLogin.rut,
+        edad: 30
+        
+      }
+    }
+
+    this.router.navigate(['/home'], datosEnviar);
+
   }
 
 }
