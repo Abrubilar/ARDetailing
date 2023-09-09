@@ -9,30 +9,39 @@
       <ion-content class="ion-padding"></ion-content>
       <ion-list>
         <ion-item>
-          <ion-icon slot="start" name="home"></ion-icon>
-          <ion-label>Inicio</ion-label>
-        </ion-item>
-        <ion-item>
           <ion-icon slot="start" name="person"></ion-icon>
-          <ion-button  routerLink="/perfil-usuario">
-            <ion-label>Perfil</ion-label>
-          </ion-button>
+          <ion-label  routerLink="/login">
+            <ion-label>Iniciar Sesion / Resgistrarse</ion-label>
+          </ion-label>
+        </ion-item>  
+        <ion-item>
+          <ion-icon slot="start" name="car-sport-outline"></ion-icon>
+          <ion-label  routerLink="/servicio">
+            <ion-label>Servicios</ion-label>
+          </ion-label>
+        </ion-item>   
+        <ion-item>
+          <ion-icon slot="start" name="calendar-outline"></ion-icon>
+          <ion-label routerLink="/reservar-hora">
+            <ion-label>Reserva tu hora</ion-label>
+          </ion-label>
         </ion-item>
         <ion-item>
-          <ion-icon slot="start" name="settings"></ion-icon>
-          <ion-button  routerLink="/configuracion">
-            <ion-label>Configuracion</ion-label>
-          </ion-button>
+          <ion-icon slot="start" name="diamond-outline"></ion-icon>
+          <ion-label routerLink="/trabajo">
+            <ion-label>Nuestros trabajos</ion-label>
+          </ion-label>
+        </ion-item>
+        
+        <ion-item>
+          <ion-icon slot="start" name="information-outline"></ion-icon>
+          <ion-label>Ayuda</ion-label>
         </ion-item>
         <ion-item>
           <ion-icon slot="start" name="exit-outline"></ion-icon>
           <ion-button  routerLink="/home">
             <ion-label>Salir</ion-label>
           </ion-button>
-        </ion-item>
-        <ion-item>
-          <ion-icon slot="start" name="information-outline"></ion-icon>
-          <ion-label>Ayuda</ion-label>
         </ion-item>
       </ion-list>
   </ion-menu>
@@ -47,13 +56,14 @@
     </ion-header>
     <ion-content [fullscreen]="true"> 
       <!-- Contenido de la página de inicio -->
+      <h1 class="ion-text-center">Expertos en brillo</h1>
       <ion-row>
         <ion-col size="6">
           <ion-card>
             <ion-img src="assets/img/tu_imagen1.jpg"></ion-img>
             <ion-card-content>
               <p>
-                Esta es una descripción de tu primer contenido de inicio. Puedes agregar imágenes y texto aquí para mostrar lo que quieras.
+                Colocar imagen de trabajo realizado 1, descripcion del trabajo realizado 1
               </p>
             </ion-card-content>
           </ion-card>
@@ -64,24 +74,78 @@
             <ion-img src="assets/img/tu_imagen2.jpg"></ion-img>
             <ion-card-content>
               <p>
-                Esta es una descripción de tu segundo contenido de inicio. Puedes agregar imágenes y texto aquí para mostrar lo que quieras.
+                Colocar imagen de trabajo realizado 2, descripcion del trabajo realizado 2
               </p>
             </ion-card-content>
           </ion-card>
         </ion-col>
       </ion-row>
 
-      <!-- Puedes seguir agregando más contenido aquí -->
+      <!-- anotar descricion de ArDetailing-->
+      <ion-row>
+        <ion-col size="12">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>¿Quienes somos?</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>
+                El detailing, en el servicio automotriz, es el conjunto de técnicas centradas en la limpieza perfecta del vehículo sin causar deterioro de los materiales que lo componen. Es más, se encarga de solucionar defectos estéticos y proteger el auto ante la mayoría de las agresiones externas.
+              </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <h1>Contactanos</h1>
+      <form class="contact-form">
+        <ion-row>
+          <ion-col size="12" class="ion-text-center">
+            <ion-item>
+              <ion-label position="floating">Nombre</ion-label>
+              <ion-input type="text" name="nombre" required></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      
+        <ion-row>
+          <ion-col size="12" class="ion-text-center">
+            <ion-item>
+              <ion-label position="floating">Correo Electrónico</ion-label>
+              <ion-input type="email" name="email" required></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      
+        <ion-row>
+          <ion-col size="12" class="ion-text-center">
+            <ion-item>
+              <ion-label position="floating">Mensaje</ion-label>
+              <ion-textarea name="mensaje" required></ion-textarea>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      
+        <ion-row>
+          <ion-col size="12" class="ion-text-center">
+            <ion-button expand="full" type="submit">Enviar</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+      
     </ion-content>
+
+
     <!-- Footer -->
     <ion-footer>
       <ion-toolbar class="footer">
-        <ion-row class="footer__row footer__row--bottom">
-          <ion-col size="12" class="ion-text-center">
-            <small class="footer__small">&copy;2023 <b>AR.Repuestos</b> Todos los derechos de autor son reservados por nuestra página web</small>
-          </ion-col>
-        </ion-row>
+          <ion-row class="footer__row footer__row--bottom">
+            <ion-col size="12" class="ion-text-center">
+              <small class="footer__small">&copy;2023 <b>ARDetailing</b> Todos los derechos de autor son reservados por nuestra página web</small>
+            </ion-col>
+          </ion-row>
       </ion-toolbar>
     </ion-footer>
+
+    
   </div>
 </ion-app>

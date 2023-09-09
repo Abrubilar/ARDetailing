@@ -78,4 +78,25 @@
     background-color: #000000;
     transition: all 300ms ease;
   }
+  ion-menu::part(backdrop) {
+    background-color: rgba(33, 32, 33, 0.5);
+  }
   
+  ion-menu::part(container) {
+    border-radius: 0 20px 20px 0;
+  
+    box-shadow: 4px 0px 16px rgba(255, 187, 0, 0.18);
+  }
+  .textoSubrayado {
+    --text-decoration: underline; /* Valor predeterminado, subrayado */
+  }
+  
+  /* Aplica la variable CSS a elementos que usen la clase .underline-text */
+  .underline-text {
+    text-decoration: var(--text-decoration);
+  }
+  
+  /* Para desactivar el subrayado en elementos específicos, puedes anular la variable */
+  .no-underline-text {
+    text-decoration: none; /* Anula la variable para quitar el subrayado */
+  }
