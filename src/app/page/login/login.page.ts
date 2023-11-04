@@ -13,10 +13,6 @@ export class LoginPage implements OnInit {
     password: ""
   }
 
-  rut: string = ""
-  password: string = ""
-
-
   constructor (private router: Router) { }
 
   ngOnInit() {
