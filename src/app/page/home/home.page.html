@@ -1,5 +1,7 @@
 <ion-content>
   <ion-app>
+
+    <!-- Menu -->
     <ion-menu contentId="main-content">
       <ion-header>
         <ion-toolbar class="colorAzul" >
@@ -11,7 +13,7 @@
         <ion-item>
           <ion-icon slot="start" name="person"></ion-icon>
           <ion-label  routerLink="/login">
-            <ion-label>Iniciar Sesion / Resgistrarse</ion-label>
+            <ion-label>Iniciar Sesion / Registrarse</ion-label>
           </ion-label>
         </ion-item>  
         <ion-item>
@@ -32,7 +34,6 @@
             <ion-label>Nuestros trabajos</ion-label>
           </ion-label>
         </ion-item>
-        
         <ion-item>
           <ion-icon slot="start" name="information-outline"></ion-icon>
           <ion-label>Ayuda</ion-label>
@@ -45,6 +46,9 @@
         </ion-item>
       </ion-list>
   </ion-menu>
+  <!-- Fin Menu -->
+
+  <!-- Header -->
   <div class="ion-page" id="main-content">
     <ion-header>
       <ion-toolbar class="colorAzul">
@@ -55,6 +59,7 @@
       </ion-toolbar>
     </ion-header>
     <ion-content [fullscreen]="true"> 
+
       <!-- Contenido de la página de inicio -->
       <h1 class="ion-text-center">Expertos en brillo</h1>
       <ion-row>
@@ -96,6 +101,8 @@
           </ion-card>
         </ion-col>
       </ion-row>
+
+      <!--Tarjeta contactanos-->
       <h1>Contactanos</h1>
       <form class="contact-form">
         <ion-row>
