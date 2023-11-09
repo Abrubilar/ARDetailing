@@ -45,6 +45,10 @@ const routes: Routes = [
     redirectTo: 'not-found',
     pathMatch: 'full'
   },
+  {
+    path: 'modal',
+    loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
+  },
 ];
 
 @NgModule({
