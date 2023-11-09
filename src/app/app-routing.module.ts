@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
+
 
 const routes: Routes = [
 
@@ -7,6 +9,14 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./page/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./page/login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'servicio',
@@ -18,19 +28,22 @@ const routes: Routes = [
   },
   {
     path: 'reservar-hora',
-    loadChildren: () => import('./page/reservar-hora/reservar-hora.module').then( m => m.ReservarHoraPageModule)
+    loadChildren: () => import('./page/reservar-hora/reservar-hora.module').then( m => m.ReservarHoraPageModule),
+    canActivate: [AuthGuard]
   },
-  {
-    path: 'login',
-    loadChildren: () => import('./page/login/login.module').then( m => m.LoginPageModule)
-  },
+ 
   {
     path: 'registro',
     loadChildren: () => import('./page/registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
-    path: 'home',
-    loadChildren: () => import('./page/home/home.module').then( m => m.HomePageModule)
+    path: 'not-found',
+    loadChildren: () => import('./page/not-found/not-found.module').then( m => m.NotFoundPageModule)
+  },
+  {
+    path: '**',
+    redirectTo: 'not-found',
+    pathMatch: 'full'
   },
 ];
 

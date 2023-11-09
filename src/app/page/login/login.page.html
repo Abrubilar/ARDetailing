@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="colorAmarillo">
     <ion-title>Login</ion-title>
     <ion-buttons slot="start">
       <ion-back-button> </ion-back-button>
@@ -22,7 +22,7 @@
   </ion-item>
 
   
-    <ion-button [routerLink]="['/home']" shape="block" > Iniciar sesion </ion-button>
+    <ion-button (click)="iniciarSesion()" shape="block" > Iniciar sesion </ion-button>
     <ion-button [routerLink]="['/registro']" shape="block" > Registrarse </ion-button>
   
   
