@@ -9,5 +9,45 @@
 </ion-header>
 
 <ion-content>
-  
+  <ion-list>
+    <ion-item>
+      <ion-input labelPlacement="floating" value="" fill="solid" ngModel>
+        <div slot="label">Nombrea <ion-text color="danger">(Obligatorio)</ion-text></div>
+      </ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-input labelPlacement="floating" value="" fill="solid" ngModel>
+        <div slot="label">Apellidos <ion-text color="danger">(Obligatorio)</ion-text></div>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="staked">Fecha de nacimiento</ion-label>
+      <ion-input type="date" name="fecha" required></ion-input>
+    </ion-item>
+    
+    
+    <ion-item>
+      <ion-input labelPlacement="floating" value="" fill="solid" ngModel>
+        <div slot="label">Email <ion-text color="danger">(Obligatorio)</ion-text></div>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input labelPlacement="floating" value="" fill="solid" ngModel>
+        <div slot="label">Número de telefono <ion-text color="danger">(Obligatorio)</ion-text></div>
+      </ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-input labelPlacement="floating" value="" fill="solid" ngModel>
+        <div slot="label">Contraseña <ion-text color="danger">(Obligatorio)</ion-text></div>
+      </ion-input>
+    </ion-item>
+    
+  </ion-list>
+
+  <ion-button [routerLink]="['/loginpage']" shape="block">Registrarse</ion-button>
+
 </ion-content>
