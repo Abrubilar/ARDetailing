@@ -2,56 +2,58 @@
   <ion-app>
 
     <!-- Menu -->
-    <ion-menu contentId="main-content">
-      <ion-header>
-        <ion-toolbar class="colorAzul" >
-          <ion-title>Contenido</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding"></ion-content>
-      <ion-list>
-        <ion-item>
-          <ion-icon slot="start" name="person"></ion-icon>
-          <ion-label  routerLink="/login">
-            <ion-label>Iniciar Sesion / Registrarse</ion-label>
-          </ion-label>
-        </ion-item>  
-        <ion-item>
-          <ion-icon slot="start" name="car-sport-outline"></ion-icon>
-          <ion-label  routerLink="/servicio">
-            <ion-label>Servicios</ion-label>
-          </ion-label>
-        </ion-item>   
-        <ion-item>
-          <ion-icon slot="start" name="calendar-outline"></ion-icon>
-          <ion-label routerLink="/reservar-hora">
-            <ion-label>Reserva tu hora</ion-label>
-          </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-icon slot="start" name="diamond-outline"></ion-icon>
-          <ion-label routerLink="/trabajo">
-            <ion-label>Nuestros trabajos</ion-label>
-          </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-icon slot="start" name="information-outline"></ion-icon>
-          <ion-label>Ayuda</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-icon slot="start" name="exit-outline"></ion-icon>
-          <ion-label  routerLink="/home">
-            <ion-label>Salir</ion-label>
-          </ion-label>
-        </ion-item>
-      </ion-list>
-  </ion-menu>
+   <ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar class="colorAzul">
+      <ion-title>Contenido</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"></ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label routerLink="/login">
+        <ion-icon slot="start" name="person"></ion-icon>
+        Iniciar Sesion / Registrarse
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label routerLink="/servicio">
+        <ion-icon slot="start" name="car-sport-outline"></ion-icon>
+        Servicios
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label routerLink="/reservar-hora">
+        <ion-icon slot="start" name="calendar-outline"></ion-icon>
+        Reserva tu hora
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label routerLink="/trabajo">
+        <ion-icon slot="start" name="diamond-outline"></ion-icon>
+        Nuestros trabajos
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start" name="information-outline"></ion-icon>
+      <ion-label>Ayuda</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label routerLink="/home">
+        <ion-icon slot="start" name="exit-outline"></ion-icon>
+        Salir
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-menu>
+
+
   <!-- Fin Menu  -->
 
   <!-- Header -->
   <div class="ion-page" id="main-content">
     <ion-header>
-      <ion-toolbar class="colorAzul">
+      <ion-toolbar class="colorAmarillo">
         <ion-buttons slot="start">
           <ion-menu-button  auto-hide="false"></ion-menu-button>
         </ion-buttons>
@@ -59,7 +61,7 @@
       </ion-toolbar>
     </ion-header>
     <ion-content [fullscreen]="true"> 
-      <ion-button (click)="verStorage()" >Ver datos Storage</ion-button>
+    
 
       <!-- Contenido de la página de inicio -->
       <h1 class="ion-text-center">Expertos en brillo</h1>
@@ -102,7 +104,14 @@
           </ion-card>
         </ion-col>
       </ion-row>
-
+      <!-- fin descripcion  -->
+      
+      <!-- Mapa --> 
+      <h1>Ubicación</h1>
+            <capacitor-google-map #map></capacitor-google-map>
+         
+    
+      
       <!--Tarjeta contactanos-->
       <h1>Contactanos</h1>
       <form class="contact-form">
@@ -148,7 +157,7 @@
       <ion-toolbar class="footer">
           <ion-row class="footer__row footer__row--bottom">
             <ion-col size="12" class="ion-text-center">
-              <small class="footer__small">&copy;2023 <b>ARDetailing</b> Todos los derechos de autor son reservados por nuestra página web</small>
+              <small class="footer__small">&copy;2023 <b>ARDetailing</b> Todos los derechos son reservados</small>
             </ion-col>
           </ion-row>
       </ion-toolbar>
