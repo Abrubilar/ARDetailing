@@ -1,1 +1,4 @@
 # arDetailing
+
+AR Detailing es una empresa dedicada a la estética automotriz que ofrece una amplia gama de servicios, que incluyen lavado, pulidos, sellados cerámicos, acrílicos y sintéticos, pintura, desabolladura, lavado a vapor, personalización, polarizados y muchos más.
+La aplicación móvil que se describe en este documento es una iniciativa estratégica de AR Detailing para brindar a nuestros clientes un acceso más conveniente a nuestros servicios y productos, al tiempo que se expande la interacción con nuestra marca. Esta aplicación incluirá una serie de características esenciales, como la posibilidad de reservar horarios para servicios de estética automotriz, solicitar servicios específicos, comprar productos relacionados con el cuidado automotriz y gestionar carrito de compra. Además, ofrece funcionalidades de autenticación, como inicio de sesión y registro de nuevos usuarios, y permitirá a los clientes ver trabajos previamente realizados por AR Detailing.
