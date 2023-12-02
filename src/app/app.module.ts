@@ -17,3 +17,8 @@ import {HttpClientModule} from '@angular/common/http';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+IonicModule.forRoot({
+  rippleEffect: false,
+  mode: 'md'
+})
